@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4c6a102d57.js" crossorigin="anonymous"></script>
+    <link rel="Stylesheet" href="Style.css"> 
+    <title>PC_builder</title>
+    
+</head>
+<body>
+    <header>
+        <div id="header" class="header_div">
+            <h1>PC Builder</h1>
+            <h3 v-show="usuario_recordado" id="nombre_en_header" class="usuario"></h3>
+        </div>
+    </header>
+<main>
+    <section>
+        <div id="Username_div" v-if="continuar==0" class="login">
+            <h3>Ingrese su nombre de usuario</h3>
+            <Input type="text"v-model="usuario" placeholder="Ingrese su nombre de usuario"></Input>
+            <button type="button" v-on:click="Recordarycontinuar()">continuar</button>
+            <br>
+            <label for="Recordar">Recordar Usuario</label>
+            <input type="checkbox" id="Recordar" value="Recordar">
+        </div>
+        <!---v-if="productos==true"-->
+        <div id="productos"  class="productos">
+            <div id="mostrador" v-for="value in esCpu" :key="Computadora.id" v-show="Cpu_show" >
+                <img src="{{value.img}}">
+                <h4>{{value.nombre}}</h4>
+                <label>{{value.precio}}$</label>
+                <button v-on:click="Añadir()">Añadir>></button>
+
+            </div>
+            <div id="mostrador" v-for="value in esRam" :key="Computadora.id" v-show="Ram_show" >
+                <img src="{{value.img}}">
+                <h4>{{value.nombre}}</h4>
+                <label>{{value.precio}}$</label>
+                <button v-on:click="Añadir()">Añadir>></button>
+
+            </div>
+            <div id="mostrador" v-for="value in esGabinete" :key="Computadora.id" v-show="Gabinte_show" >
+                <img src="{{value.img}}">
+                <h4>{{value.nombre}}</h4>
+                <label>{{value.precio}}$</label>
+                <button v-on:click="Añadir()">Añadir>></button>
+
+            </div>
+            
+
+
+            
+
+       </div>
+
+
+    </section>
+    <aside>
+        <i class="fa-solid fa-microchip"></i>
+        <i class="fa-solid fa-memory"></i>
+        
+        <i class="fa-duotone fa-cube"></i>
+    </aside>
+
+</main>
+
+    <footer>
+        <p>Contactanos</p>
+        <form id="contacto" class="form_contacto">
+            <input type="text" name="nombre" placeholder="Nombre" >
+            <input type="email" name="email" aria-placeholder="email">
+            <i class="fa-duotone fa-envelope"></i>
+            <button type="submit">Enviar</button>
+        </form>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.8899638400994!2d-58.440756848720234!3d-34.606943880362714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca6ce648581f%3A0xc78c8f944f5065e7!2sLeopoldo%20Marechal%201000%2C%20C1405BMD%20CABA!5e0!3m2!1ses!2sar!4v1653801483308!5m2!1ses!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación"></iframe>
+    </footer>
+    
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="index.js"></script>
+    
+</body>
+</html>
