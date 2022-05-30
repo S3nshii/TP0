@@ -1,0 +1,254 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: none;
+    margin: none   ;
+    
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #141518;
+    height:100vh ;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 20%;
+    background-color: #24252A;
+    justify-content: flex-start;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid white;
+
+}
+
+
+header h1{
+    width: 100%;
+    margin-left: 5%;
+    justify-self: start;
+    color: aliceblue;
+
+    
+}
+header h3{
+    width:50%;
+    justify-content: flex-end;
+    margin-right: 20px;
+    color: aliceblue;
+    
+}
+header i{
+    margin-left: 10px;
+    color: aliceblue;
+    height: 100%;
+    width: auto;
+    
+}
+
+main{
+    display: flex;
+    color: aliceblue;
+    height:auto;
+    width: 100%;
+    background-color: #141518 ; 
+    
+   
+    
+}
+
+section{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    
+    
+}
+
+section div{
+    margin-top: 10px;
+    background-color:#313237  ;
+    width: 60%;
+    border-radius:10px ;
+    padding: 1em;
+    height: auto;
+}
+
+.login input[type=text]{
+    width: 80%;
+    height: 2em;
+    margin-bottom:5px ;
+    background-color: #313237;
+    border: none;
+    border-bottom:1px solid white ;
+    color: aliceblue;
+}
+
+.login button{
+    border-radius: 5px;
+    height: 3em;
+    width: 7em;
+    color: aliceblue;
+    background-color: #313237;
+    border-color: aliceblue;
+    
+    font-weight: bold;
+}
+.login button:hover{
+    background-color: lightgray;
+}
+.productos{
+    width: 100%;
+    max-height: min-content;
+}
+.mostrador{
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid grey;
+    
+
+}
+.mostrador h4{
+    flex-wrap: wrap;
+    max-width: 300px;
+}
+
+.mostrador img{
+    display: flex;
+    border-radius: 8px;
+    max-width: 10em;
+    max-height: fit-content;
+    margin-right: 2em;
+}
+
+.mostrador button{
+    color: #090909;
+ padding: 0.7em 1.7em;
+ font-size: 18px;
+ border-radius: 0.5em;
+ background: #e8e8e8;
+ border: 1px solid #e8e8e8;
+ transition: all .3s;
+ box-shadow: 6px 6px 12px #c5c5c5,
+             -6px -6px 12px #ffffff;
+}
+
+.mostrador button:active{
+    color: #666;
+ box-shadow: inset 4px 4px 12px #c5c5c5,
+             inset -4px -4px 12px #ffffff;
+}
+
+aside{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+}
+aside i{
+    width: 50%;
+    align-self: center;
+    margin-top: 100px;
+    
+}
+
+
+
+
+
+footer{
+    display: flex;
+    background-color: #24252A;
+    height: 20%;
+    width: 100%;
+    
+    align-content: flex-end;
+    justify-content: space-between;
+    align-items: stretch;
+    border-radius: 5px;
+    margin: 5px;
+    
+    
+    
+}
+
+footer p{
+    align-self: center;
+    color: aliceblue;
+    margin-left: 50px;
+    font-weight: bold;
+    font-size: larger;
+    
+}
+
+footer form{
+    height: 100%;
+    width: 20em;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    
+
+}
+
+footer form input[type=text]{
+    width: 70%;
+    align-self: center;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: #24252A ;
+}
+
+footer form input[type=text]:focus{
+    background-color: #313237 ;
+}
+footer span{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+footer span input{
+    
+    width:90%;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: #24252A ;
+    
+}
+footer span input:focus{
+    background-color: #313237 ;
+}
+footer span i{
+    color: aliceblue;
+}
+
+footer form button {
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 0.75em;
+    padding: 0.75em 1.5em;
+    background: #e8e8e8;
+    color: #000000;
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+}
+
+
+footer iframe{
+    margin-right: 50px;
+    height: 90%;
+    align-self: center;
+    align-content: flex-end;
+    flex-grow: 0.3;
+
+}
