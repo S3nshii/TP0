@@ -26,7 +26,7 @@
             <label for="Recordar">Recordar Usuario</label>
             <input type="checkbox" id="Recordar" value="Recordar">
         </div>
-        <!---v-if="productos==true"-->
+        
         <div id="productos"  class="productos" v-if="productos==true">
             <div id="mostrador" class="mostrador" v-for="value in esCpu" :key="Computadora.id" v-show="Cpu_show" >
                 <img :src="value.img" title="cpu">
@@ -76,7 +76,7 @@
         <p>Contactanos:</p>
         <form id="contacto" class="form_contacto">
             <input type="text" name="nombre" id="nombre_contacto" placeholder="Nombre" >
-           <span> <i class="fa-duotone fa-envelope"></i><input type="email" id="email" name="email" placeholder="Email">
+           <span> <font-awesome-icon icon="fa-solid fa-envelope" /><input type="email" id="email" name="email" placeholder="Email">
             </span>
             <button type="button" onclick="Validarmail()">Enviar</button>
         </form>
