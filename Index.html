@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://css.gg/mail.css' rel='stylesheet'>
-    
     <script src="https://kit.fontawesome.com/4c6a102d57.js" crossorigin="anonymous"></script>
     <link rel="Stylesheet" href="Style.css"> 
-
     <title>PC_builder</title>
     
 </head>
@@ -30,47 +27,47 @@
             <input type="checkbox" id="Recordar" value="Recordar">
         </div>
         
-        <section id="productos"  class="productos" v-if="productos==true">
-            <article :id="value.componente" class="mostrador" v-for="value in esCpu" :key="Computadora.id" v-show="Cpu_show" >
+        <div id="productos"  class="productos" v-if="productos==true">
+            <div id="mostrador" class="mostrador" v-for="value in esCpu" :key="Computadora.id" v-show="Cpu_show" >
                 <img :src="value.img" title="cpu">
                 <h4>{{value.nombre}}</h4>
                 <label>{{value.precio}}$</label>
                 <button v-on:click="Añadir(0,value.nombre)">Añadir>></button>
 
-            </article>
-            <article :id="value.componente" class="mostrador" v-for="value in esRam" :key="Computadora.id" v-show="Ram_show" >
+            </div>
+            <div id="mostrador" class="mostrador" v-for="value in esRam" :key="Computadora.id" v-show="Ram_show" >
                 <img :src="value.img" >
                 <h4>{{value.nombre}}</h4>
                 <label>{{value.precio}}$</label>
                 <button v-on:click="Añadir(1,value.nombre)">Añadir>></button>
 
-            </article>
-            <article :id="value.componente" class="mostrador" v-for="value in esGabinete" :key="Computadora.id" v-show="Gabinte_show" >
+            </div>
+            <div id="mostrador" class="mostrador" v-for="value in esGabinete" :key="Computadora.id" v-show="Gabinte_show" >
                 <img :src="value.img">
                 <h4>{{value.nombre}}</h4>
                 <label>{{value.precio}}$</label>
                 <button v-on:click="Añadir(2,value.nombre)">Añadir>></button>
 
-            </article>
-            <article id="compra" class="mostrador" v-for="value in Carrito" :key="Computadora.id" v-if="carrito_show">
+            </div>
+            <div id="compra" class="mostrador" v-for="value in Carrito" :key="Computadora.id" v-show="carrito_show">
                 <img :src="value.img">
                 <h4>{{value.nombre}}</h4>
                 <label>{{value.precio}}$</label>
 
-            </article>
+            </div>
             
 
 
             
 
-        </section>
+       </div>
 
 
     </section>
     <aside>
         <i class="fa-solid fa-microchip fa-6x"></i>
         <i class="fa-solid fa-memory fa-6x"></i>
-        <i class="fa-solid fa-box-archive fa-6x"></i>
+        <i class="fa-duotone fa-cube fa-6x"></i>
     </aside>
 
 </main>
@@ -79,7 +76,7 @@
         <p>Contactanos:</p>
         <form id="contacto" class="form_contacto">
             <input type="text" name="nombre" id="nombre_contacto" placeholder="Nombre" >
-           <span> <i class="gg-mail"></i><input type="email" id="email" name="email" placeholder="Email">
+           <span> <font-awesome-icon icon="fa-solid fa-envelope" /><input type="email" id="email" name="email" placeholder="Email">
             </span>
             <button type="button" onclick="Validarmail()">Enviar</button>
         </form>
